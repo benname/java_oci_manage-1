@@ -2,8 +2,8 @@
 
 # Contents
 
-- [1.Robot Command Menu Explanation](#1)
-- [2./oracle Keyboard Menu Explanation](#2)
+- [1. Robot Command Menu Explanation](#1)
+- [2. /oracle Keyboard Menu Explanation](#2)
 
 
 ## 1.Robot Command Menu
