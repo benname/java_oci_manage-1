@@ -34,7 +34,7 @@
 
 - 【First】Please follow [the channel](https://t.me/agentONE_R) and [the bot](https://t.me/radiance_helper_bot)
 
-- 【Then】[Install and configure ](https://github.com/semicons/java_oci_manage/blob/main/md/install.md)(you can choose between public network mode and local non-public network mode)
+- 【Then】[Install and configure ](https://github.com/semicons/java_oci_manage/blob/main/md/install-en.md)(you can choose between public network mode and local non-public network mode)
 
 - 【Next】Use the bot command '/raninfo' to generate random information, then insert it into the 'client_config' file (created after executing the one-click installation command), and also input the Oracle Cloud API parameters into the configuration file (or upload API parameters via the bot).
 
@@ -56,13 +56,13 @@ apt remove openjdk*
 ```
 
 ### Documentation and Help
-- [Implemented Features](https://github.com/semicons/java_oci_manage/blob/main/md/function.md)
+- [Implemented Features](https://github.com/semicons/java_oci_manage/blob/main/md/function-en.md)
 
-- [Robot Operations and Command Guide](https://github.com/semicons/java_oci_manage/blob/main/md/BOT-README.md)
+- [Robot Operations and Command Guide](https://github.com/semicons/java_oci_manage/blob/main/md/BOT-README-en.md)
 
-- [Oracle Cloud API Parameter Retrieval and Upload(tip：When creating an API file for flashing devices only, you can restrict various operational permissions.)](https://github.com/semicons/java_oci_manage/blob/main/md/oracle.md)
+- [Oracle Cloud API Parameter Retrieval and Upload(tip：When creating an API file for flashing devices only, you can restrict various operational permissions.)](https://github.com/semicons/java_oci_manage/blob/main/md/oracle-en.md)
 
-- [Azure API Parameter Retrieval and Upload](https://github.com/semicons/java_oci_manage/blob/main/md/azure.md)
+- [Azure API Parameter Retrieval and Upload](https://github.com/semicons/java_oci_manage/blob/main/md/azure-en.md)
 
 - [Frequently Asked Questions](https://t.me/agentONE_R/41)
 
