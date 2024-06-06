@@ -1,9 +1,9 @@
-### azure云获取API参数和上传配置
+### Azure Cloud API Parameter Retrieval and Configuration Upload
 ```text
-1. 登录Azure后台，选择右上角的Cloud Shell
-2. 选择PowerShell，执行如下命令，获取API相关参数
+1. Log in to the Azure portal and select the Cloud Shell icon in the upper right corner.
+2. Choose PowerShell and execute the following commands to retrieve API-related parameters.
 az ad sp create-for-rbac --role contributor --scopes /subscriptions/$(az account list --query [].id -o tsv)
-3. 使用/oci 命令直接上传你的配置 如：
+3. Use the /oci command to directly upload your configuration. Example:
   /oci {
   "appId": "xxxxx-xxx-xx-xxx-xxxx",
   "displayName": "azure-cli-11111-12-111-11-222-22",
