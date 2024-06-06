@@ -1,224 +1,223 @@
-> 机器人使用说明
+> Robot Usage Guide
 
-# 目录
+# Contents
 
-- [1.机器人指令菜单说明](#1机器人指令菜单)
-- [2./oracle键盘菜单说明](#2oracle键盘菜单)
+- [1.Robot Command Menu Explanation](#1Robot Command Menu Explanation)
+- [2./oracle Keyboard Menu Explanation](#2oracle Keyboard Menu Explanation)
 
 
-## 1.机器人指令菜单
+## 1.Robot Command Menu
 
 ### /oracle
 
-- 获取甲骨文云操作键盘来进行开机等等操作
+- Access the Oracle Cloud operation keyboard for actions such as starting machines, etc.
 
 ### /azure
 
-- 获取azure云操作键盘来进行开机等等操作
+- Access the Azure Cloud operation keyboard for actions such as starting machines, etc.
 
 ### /me
 
-- 获取个人闪电订阅信息
+- Retrieve personal lightning subscription information
 
 ### /raninfo
 
-- 获取或重置为随机用户信息
+- Generates or resets to random user information
 
-请注意保存此信息，如遇TG被封等问题，可凭借此信息重新绑定TG
+Please save this information. If you encounter issues such as being blocked on Telegram, you can use this information to rebind your Telegram account.
 
 ### /qrcode
 
-- 闪电权限充值
+- Lightning Access Recharge
 
-获取二维码支付，用以捐赠或购买闪电权限，支付完成会收到激活码用以激活闪电权限
+Obtain a QR code for payments, used for donations or purchasing Lightning Access. After payment, you will receive an activation code to activate the Lightning Access.
 
 ### /codeflash
 
-- 支付号获取闪电
+- Activate Lightning Access without a payment note
 
-如您支付时未填写备注，可从此激活闪电权限 用法 /codeflash 交易订单号
+If you did not include a note with your payment, you can activate your Lightning Access by using this command with your transaction order number. Usage: /codeflash transaction_order_number.
 
 ### /flash
 
-- 对比普通权限和闪电权限
+- Compare standard access and Lightning Access
 
 ### /migrate
 
-- 转移闪电权限
+- Transfer Lightning Access
 
-转移闪电权限到当前登录账号 /migrate 旧用户名 旧密码  
+Transfer your Lightning Access to your current login account. Use /migrate old_username old_password.  
 
 ### /oci
 
-- 上传甲骨文配置或azure配置
+- Upload Oracle or Azure configurations
 
-此处上传到当前客户端配置信息 出于安全因素,如上传甲骨文配置里的key_file需要自己上传至你客户端服务器,此处只写你私钥的路径
+Upload your current client configuration details here. For security reasons, if you're uploading Oracle configurations, the key_file must be uploaded to your client server directly. Only specify the path to your private key here.
 
 ### /getflash
 
-- 激活码获取闪电权限
+- Activate Lightning Access with an activation code
 
-使用方法 /getflash 激活码
+To activate your Lightning Access, use /getflash activation_code.
 
 ### /command
 
-- 当前客户端执行shell命令
+- Execute shell commands on the current client
 
-在当前客户端服务器上执行shell命令的功能
+Allows you to execute shell commands on your current client server.
 
 ### /pubkey
 
-- 添加开机时需要的ssh公钥
+- Add an SSH public key required for booting.
 
 ### /oproxy
 
-- 为客户端profile添加代理
+- Add a proxy to a client profile.
 
-使用此命令可以对客户端某个profile添加http代理请求从而不使用客户端ip
+Use this command to add an HTTP proxy to a specific client profile, allowing requests to be made without using the client's IP.
 
 ### /clearlock
 
-- 清除密码错误过多导致的锁定
+- Clear locks caused by too many incorrect password attempts.
 
 ### /qb
 
-- 充值未到账/广告合作反馈
+- Address issues with recharge not being credited or provide feedback on advertising partnerships.
 
 ### /qs
 
-- 闪电用户问题专线
+- Dedicated support line for Lightning users
 
-防止有人爆破你的信息而导致的锁定
+Prevents lockouts caused by brute force attacks on your information.
 
-### 标注管理员指令的请勿操作
+### Do not operate without admin rights
 
-## 2.oracle键盘菜单
+## 2.Oracle Keyboard Menu
 
-### 1. 开机(刷ARM)
+### 1. Boot (ARM-specific)
 
-当前账户可进行开机操作,自定义的系统、cpu类型你需要知道甲骨文内部名称，延迟单位为秒，需要注意的是开机时需要二次确认完成再次点击键盘确定开机按钮才开始进行开机操作
+You can boot your account with custom system configurations and CPU types, but you need to know Oracle's internal names for these. The delay is measured in seconds. It's important to note that booting requires a confirmation—only after clicking the keyboard's confirm button again does the boot process start.
 
-### 2. ip管理
+### 2. IP Management
 
-可以更换ip\
-可以快速将机器ip分配给cloudflare托管的域名\
-也可以在更换ip的同时对ip所绑定域名的DNS记录进行更新 达到伪ddns的功能\
-(需要提前将cloudflare的邮箱和密钥填入配置文件内，cloudflare key 在我的个人资料->API令牌处->API密钥->Global API Key	获取)\
-删除域名为清空当前ip的所绑定的所有域名\
-可以删掉当前ip
+IP Replacement: You can change the IP.
+Assign to Cloudflare Managed Domain: Quickly assign the machine IP to a domain managed by Cloudflare.
+Pseudo-DDNS Function: While changing the IP, you can also update the DNS records of the domain bound to the IP, achieving a pseudo-DDNS functionality. (This requires pre-entering Cloudflare's email and key in the configuration file. Obtain the Cloudflare key from My Profile -> API Tokens -> API Keys -> Global API Key.)
+Delete Domain: Removes all domains associated with the current IP.
+Delete Current IP: You can delete the current IP.
 
-### 3.被暂停开机
+### 3.Boot from Suspension
 
-机器被关闭时可以使用此功能进行开机刷机，不需要删掉硬盘重新开机
+This function allows you to boot the machine from a shutdown state without needing to delete the disk and reboot.
 
-### 4. ipv6管理
+### 4. IPv6 Management
 
-当前账户可以进行ipv6更换等
+Current accounts can perform actions such as changing IPv6 addresses.
 
-### 5. 升/降级实例
+### 5. Instance Upgrading/Downgrading
 
-当前账户对甲骨文机器进行升降cpu、内存操作
+Current accounts can upgrade or downgrade CPU and memory specifications on Oracle machines.
 
-### 6. 实例管理
+### 6. Instance Management
 
-当前账户可以删除实例、附加IPV6、附加IPV4(一机多ipv4的效果)、智能附加保留IP(自动判断当前是否有未使用的保留ip和网卡是否有公网ip等)、关闭oracle自带的实例用量监控、打开监控、强制断电重启、修改实例名称、删除所有IPV6、重置系统为初始化系统
+In instance management, current accounts can delete instances, attach additional IPv4 and IPv6 addresses, intelligently attach reserved IPs, disable or enable Oracle's monitoring, forcibly restart, modify instance names, delete all IPv6 addresses, and reset the system to its initial setup.
 
-### 7. 磁盘管理
+### 7. Disk Management
 
-当前账户可以进行启动盘的删除操作，也可增加启动盘的容量，不可减小，也可进行启动盘的分离和附加，也可对当前账户对甲骨文的vpu性能拉满 来提升IO速度
+Current accounts can delete the boot disk, increase its capacity (but not decrease it), detach and attach the boot disk, and maximize Oracle VPU performance to enhance IO speed.
 
-### 8. 云账户管理
+### 8. Cloud Account Management
 
-当前账户可以增加管理员用户并上传API、重置当前用户密码、批量查询用户邮箱、删除用户功能
+Current accounts can add administrative users and upload APIs, reset current user passwords, query user emails in bulk, and delete users.
 
-### 9. 实例状态监控通知
+### 9.  Instance Status Monitoring Notification
 
-打开后会定时对所有实例状态进行监控，如有异常将会进行通知
+Once enabled, it monitors the status of all instances regularly and notifies you of any anomalies.
 
-### 10. 实例状态监控自启
+### 10. Instance Status Monitoring Auto-Restart
 
-打开后会定时对所有实例状态进行监控，如有异常将会尝试自动启动
+When enabled, it automatically monitors all instances and attempts to restart them if any anomalies are detected.
 
-### 11. 开放云面板端口
+### 11. Open Cloud Panel Ports
 
-一键开放当前账户的所有云面板端口访问并清除账户的防火墙规则（非实例防火墙，为甲骨文后台操作的总防火墙）
+With one click, open all cloud panel ports for the current account and clear the account's firewall rules (not instance firewalls, but the main firewall managed by Oracle).
 
-### 12. 甲骨文工作流错误
+### 12. Oracle Workflow Errors
 
-只查询最近3次甲骨文工作流返回的错误
+Only queries the errors returned by the last three Oracle workflow operations.
 
-### 13. profile管理
+### 13. Profile Management
 
-如果客户端填写了多个profile，也就是多个配置文件，请在此处切换选择不同的配置，也可删除不需要的profile
+If multiple profiles, i.e., multiple configuration files, are filled in the client, you can switch and select different configurations here or delete profiles that are not needed.
 
-### 14. 客户端管理
+### 14. Client Management
 
-如果你有多个机器启动了脚本，那么可以在此处切换你的客户端，选择不同的配置，也可在此处删除不需要的客户端
+If you have multiple machines running the script, you can switch between different clients and configurations here, and delete any clients that are not needed.
 
-### 15. 一键测活
+### 15. One-Click Testing
 
-批量一键测活所有profile和所有客户端的账户
+Performs a batch one-click activity test for all profiles and all client accounts.
 
-### 16. 监控(自动换ip)
+### 16. Monitoring (Automatic IP Change)
 
-设置当前客户端指定监控ip来触发换ip的动作并进行域名绑定，选择的ip，选择是否需要代理(无代理则会使用当前客户端ip为基准进行判断)，最后奈飞非自制剧检测 即可进行监测
+Set up monitoring for a specified IP on the current client to trigger an IP change and domain binding. Choose the IP, decide if a proxy is needed (without a proxy, the current client IP is used for assessment), and perform checks like Netflix non-original series detection.
 
-### 17. 快捷开机
+### 17. Quick Boot
 
-可以先保存开机配置 然后可以多个配置 多个profile 同时开机 或 多个配置 多个客户端同时开机 （多个profile和多个客户端同时选择 则只会生效多个客户端同时开机）
+Save boot configurations and then boot multiple configurations and profiles simultaneously, or boot multiple configurations across different clients at the same time (if both multiple profiles and clients are selected, only the multiple clients booting simultaneously will take effect).
 
-### 18. 甲骨文订阅信息
+### 18. Oracle Subscription Info
 
-查询当前账户甲骨文免费订阅日期和金额
+Check the current account's Oracle free subscription dates and amounts.
 
-### 19. 本月已用流量
+### 19. Monthly Data Usage
 
-当前账户所用的流量信息
+View the data usage for the current account.
 
-### 20. 查询配额
+### 20. Query Quotas
 
-查询您在甲骨文云实例 网络 存储配额
+Check your quotas for Oracle Cloud instances, network, and storage.
 
-### 21. 查看运行中的任务
+### 21. View Running Tasks
 
-查询所有客户端正在运行的任务 如开机和升级
+Query all tasks currently running on clients, such as booting and upgrading.
 
-### 22. 查看客户端负载
+### 22. View Client Load
 
-查询当前客户端的负载情况
+Check the current load on the client.
 
-### 23. 占用25%内存
+### 23. Occupy 25% Memory
 
-智能增加程序占用至25%内存，如系统占用不够则会补足，如已占用25%则不会占用
+Intelligently increase the program's memory usage to 25%; if the system's current usage is below this, it will adjust accordingly. If already at 25%, it will not increase further.
 
-### 24. 清除缓存和占用
+### 24. Clear Cache and Usage
 
-清除系统内存的缓存和25%的占用
+Clear the system memory's cache and the 25% usage allocation.
 
-### 25. 查看本月花费
+### 25. View Monthly Expenditure
 
-查看付费账户的花费项目和金额，多区域的需在主账户查询
+View spending details and amounts for paid accounts; for multi-region accounts, these need to be checked from the main account.
 
-### 26. 清除所有2FA设备
+### 26. Clear All 2FA Devices
 
-清除所有已绑定的两步验证设备（丢失设备或者丢失密钥可用此方法重置）
+Remove all bound two-factor authentication devices (useful if a device is lost or the keys are misplaced).
 
-### 27. 重启客户端
+### 27. Restart Client
 
-重启当前客户端
+Restart the current client.
 
-### 28. 升级客户端
+### 28. Upgrade Client
 
-对所有客户端进行检测并升级（如检测需要升级则会中断所有操作）
+Check all clients and upgrade them if necessary (if an upgrade is detected, all operations will be interrupted).
 
-### 29. 一键禁用被封账户
+### 29. Disable Locked Accounts with One Click
 
-对所有客户端检查是否有被封账户，如有被封账户则进行注释处理（不会删除配置）
+Check all clients for any locked accounts and comment them out (configurations will not be deleted).
 
-### 30. 一键禁用被封账户
+### 30. Disable and Delete API of Locked Accounts
 
-此操作删除API后则永久失效，后续如需使用需从官网再次生成API文件(如果您丢失了当前账户邮箱或者无法登录，且只有当前API，那么此操作意味着您将丢失您宝贵的账户)
+This operation permanently deactivates the API after deletion; if you need to use it again, you must regenerate the API file from the official website (if you've lost access to your current account's email or can't log in, and only have the current API, this means you will lose your valuable account).
 
-### 31. 查询最新日志
+### 31. Query Latest Logs
 
-查询最新的10条日志
+Query Latest Logs.
