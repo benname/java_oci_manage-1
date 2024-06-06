@@ -1,12 +1,12 @@
-#### 1.Linux一键安装/更新（运行完后使用bash sh_java_oci.sh可重启运行）
-- 脚本并未创建文件夹 可手动创建文件夹方便管理 如：mkdir rbot && cd rbot
+#### 1.Linux One-Click Install/Update (Use 'bash sh_java_oci.sh' after completion to restart)
+- The script does not create a directory. You can manually create one for easier management. For example: mkdir rbot && cd rbot
 ```bash
 wget -O gz_client_bot.tar.gz  https://github.com/semicons/java_oci_manage/releases/latest/download/gz_client_bot.tar.gz && tar -zxvf gz_client_bot.tar.gz --exclude=client_config  && tar -zxvf gz_client_bot.tar.gz --skip-old-files client_config && chmod +x sh_client_bot.sh && bash sh_client_bot.sh
 ```
-#### 2. 修改配置文件参数
-- 按参数说明编辑client_config文件（model填写local为启动本地无公网IP模式）
+#### 2. Modify Configuration File Parameters
+- Edit the client_config file according to the parameter instructions. For instance, set model to local to initiate local mode without a public IP.
 ```text
-#在oci=begin和oci=end之间放入你的API配置信息 支持多个配置文件 机器人操作profile管理里可更换操作账户
+#Place your API configuration details between oci=begin and oci=end within the client_config file. This setup supports multiple configuration files, and you can switch between different operational accounts using the robot's profile management feature.
 oci=begin
 
 [DEFAULT]
@@ -14,44 +14,44 @@ user=ocid1.user.oc1..aaaaaaaaxxxxgwlg3xuzwgsaazxtzbozqq
 fingerprint=b8:33:6f:xxxx:45:43:33
 tenancy=ocid1.tenancy.oc1..aaaaaaaaxxx7x7h4ya
 region=ap-singapore-1
-key_file=写你的API密钥文件路径 如：/root/rbot/xxx.pem
+key_file=Specify the path to your API key file like so:/root/rbot/xxx.pem
 
 [tokyo]
 user=ocid1.user.oc1..aaaaaaaaxxxxgwlg3xuzwgsaazxtzbozqq
 fingerprint=b8:33:6f:xxxx:45:43:33
 tenancy=ocid1.tenancy.oc1..aaaaaaaaxxx7x7h4ya
 region=ap-singapore-1
-key_file=写你的API密钥文件路径 如：/root/rbot/xxx.pem
+key_file=Specify the path to your API key file like so:/root/rbot/xxx.pem
 
 oci=end
 
 
 
-#用户信息 从 https://t.me/radiance_helper_bot 配置(bot可使用/raninfo命令随机生成)
-#必传
+#User Information: Configure from https://t.me/radiance_helper_bot (the bot can generate random information using the /raninfo command)
+#Required
 username=
-#必传
+#Required
 password=
 
 
-#cloudflare 功能参数 非必传
-#非必传 cloudflare邮箱
+#Cloudflare Functionality Parameters (optional)
+# Optional: Cloudflare email
 cf_email=
-#非必传 cloudflare key 在我的个人资料->API令牌处->API密钥->Global API Key	获取
+# Optional: Cloudflare key, obtainable from My Profile -> API Tokens -> API Keys -> Global API Key
 cf_account_key=
 
 
-#非必填 本机ip和端口号 (进阶玩家选项 可填写域名) 不写将自动获取本机ip 并使用默认端口号9527 (小白用户建议不填) 如填写 格式为:https://xxx.xx:9527
+#Optional: Local machine IP and port number (advanced users can also specify a domain name). If not specified, the system will automatically obtain the local IP and use the default port 9527. It's recommended that novice users leave this blank. If specified, the format should be: https://xxx.xx:9527
 local_address=
-#非必填 url名称(默认为address 可在bot上修改)
+#Optional: URL name (default is "address" but can be changed in the bot settings)
 local_url_name=
 
-#非必填 启动模式 填写local为启动本地无公网IP模式(只要能联网即可) 不填或填其他 则启动端口模式
+#Optional: Startup mode. Set to 'local' to initiate in local mode without a public IP (internet connection is required). Leave blank or fill in another value to start in port mode.
 model=
 
 
 
-#在azure=begin和azure=end之间放入你的azure的API配置信息 支持多个配置文件 机器人切换profile可更换操作配置 上传配置支持使用原格式({"appId":"xxx","password":"xxx"...})上传 
+#Place your Azure API configuration information between azure=begin and azure=end. This setup supports multiple configuration files, allowing you to switch operational configurations using the bot's profile management feature. You can upload configurations in the original format ({"appId":"xxx", "password":"xxx", ...}).
 azure=begin
 
 [az001]
@@ -62,21 +62,21 @@ tenant=xxxx3713-xxxx-4cb5-xxxx-3001060xxxxx
 azure=end
 ```
 
-#### 3. 启动、终止、查看日志、卸载
+#### 3. Start, Terminate, View Logs, Uninstall
 ```text
-请先在配置文件内输入对应的参数，然后运行下方需要的指令
+Please enter the required parameters in the configuration file first, then execute the necessary command below:
 
-启动或重启
+To start or restart:
 bash sh_client_bot.sh 
 
-查看日志(ctrl + c退出日志)
+To view logs (press ctrl + c to exit logs):
 tail -f log_r_client.log  
 
-终止程序
+To terminate the program:
 ps -ef | grep r_client.jar | grep -v grep | awk '{print $2}' | xargs kill -9  
 
-卸载程序
+To uninstall the program:
 rm -rf gz_client_bot.tar.gz client_config r_client.jar sh_client_bot.sh log_r_client.log debug-.log 
-如也不需要JDK也可卸载：apt-get remove openjdk*
+If JDK is also no longer needed, it can be uninstalled with:apt-get remove openjdk*
 
 ```
