@@ -1,36 +1,36 @@
-## 已实现功能（oracle甲骨文）
-* [x] 开机(amd和刷arm intel 支持自定义开机)
-* [x] 一键查询和更改ip以及更换ip自动更换域名解析
-* [x] 修改硬盘大小和性能
-* [x] 升级、降级实例、修改实例名称、打开/关闭实例监控、尝试修复实例
-* [x] 删除硬盘
-* [x] tg通知
-* [x] 终止实例
-* [x] 开放云面板安全组(控制台放行所有ipv4端口)
-* [x] 云账户管理（修改租户名、修改邮箱、添加管理员用户、删除用户、重置密码）
-* [x] CF快捷操作 (cloudflare快速给ip绑定域名)
-* [x] 上传代理快捷操作
-* [x] 用户快捷/批量开机操作
-* [x] 自适应AD开机
-* [x] 查询账户已用流量
-* [x] 一键附加IPV6(自动放开ipv6安全组)
-* [x] 一键附加IPV4(给实例附加多个IP)
-* [x] 查询甲骨文订阅信息
-* [x] 上传API快捷操作
-* [x] 查询客户端负载
-* [x] 客户端执行命令
-* [x] 自动监控更换ip
-* [x] 无公网启动bot
-* [x] 查询配额
-* [x] 一键附加预留IP
-* [x] 无需公网ip和端口 实现本地模式操作
-* [x] 一键禁用所有被封账户
-## azure已实现的功能
-* [x] 自定义开机
-* [x] 换ip
-* [x] 删除实例
-* [x] 查配额使用情况
-* [x] 删除所有资源
-## 正在开发的功能
+## Implemented Features (Oracle Cloud)
+* [x] Booting (AMD and custom booting for ARM and Intel)
+* [x] One-click IP query and change, with automatic domain name resolution update upon IP change
+* [x] Modify disk size and performance
+* [x] Upgrade, downgrade instances, modify instance names, toggle instance monitoring on/off, and attempt instance repairs
+* [x] Delete disks
+* [x] Telegram notifications
+* [x] Terminate instances
+* [x] Open all IPv4 ports in cloud panel security groups
+* [x] Cloud account management (modify tenant name, email, add admin users, delete users, reset passwords)
+* [x] CF Quick Actions (quickly bind IP to a domain via Cloudflare)
+* [x] Upload proxy for quick operations
+* [x] User quick/batch boot operations
+* [x] Adaptive AD booting
+* [x] Query account data usage
+* [x] One-click attachment of IPv6 (automatically opens IPv6 security group)
+* [x] One-click attachment of multiple IPv4s to an instance
+* [x] Query Oracle subscription information
+* [x] Upload API for quick operations
+* [x] Query client load
+* [x] Execute commands on clients
+* [x] Automatic monitoring and IP change
+* [x] Start bot without public internet
+* [x] Query quotas
+* [x] One-click attachment of reserved IPs
+* [x] Operate in local mode without the need for public internet IP and ports
+* [x] Disable all locked accounts with one click
+## Implemented Features (Azure Cloud)
+* [x] Custom boot
+* [x] Change IP
+* [x] Delete instances
+* [x] Check quota usage
+* [x] Delete all resources
+## Features Under Development
 
-* [ ] 暂无
+* [ ] None currently
