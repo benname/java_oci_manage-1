@@ -6,74 +6,73 @@
  <img src="https://img.shields.io/github/stars/semicons/java_oci_manage.svg?style=flat-square&label=Stars&logo=github"/>
 </p>
 
-### 前言
-> 本系统目前应用于甲骨文云/azure云的一些快捷操作。
+### Preface
+> The system is currently used for some quick operations on Oracle Cloud/Azure Cloud.
 > 
-### 声明
+### Declaration
 > 
-> 本系统为双端制，机器人不存储任何敏感数据。
+> The system is dual-ended, and the robot does not store any sensitive data.
 > 
-> API私钥在你的客户端服务器本地，由bot驱动你的客户端操作，你可以随时关闭服务。
+> The API private key is local on your client server, driven by the bot to operate your client. You can terminate the service at any time.
 > 
-> 介意请千万勿使用，谢谢。
+> If you mind, please do not use it. Thank you.
 >
-> 以下为 **【免责条款】**
+> Disclaimer
 > 
-> 本仓库发布的项目中涉及的任何脚本，仅用于测试和学习研究，禁止用于商业用途，不能保证其合法性，准确性，完整性和有效性，请根据情况自行判断.
+> Any scripts involved in the projects released by this repository are only for testing and research purposes, and are prohibited for commercial use. Their legality, accuracy, completeness, and effectiveness cannot be guaranteed. Users should judge according to their circumstances.
 >
-> 所有使用者在使用项目的任何部分时，需先遵守法律法规。对于一切使用不当所造成的后果，需自行承担。对任何脚本问题概不负责，包括但不限于由任何脚本错误导致的任何损失或损害.
+> All users must comply with laws and regulations when using any part of the project. Users must bear all consequences of misuse. We are not responsible for any issues with the scripts, including but not limited to any losses or damages caused by script errors.
 >
-> 如果任何单位或个人认为该项目可能涉嫌侵犯其权利，则应及时通知并提供身份证明，所有权证明，我们将在收到认证文件后删除相关文件.
+> If any entity or individual believes that the project may infringe on their rights, they should notify us promptly and provide proof of identity and ownership. We will delete the relevant files upon receiving verification documents.
 >
-> 任何以任何方式查看此项目的人或直接或间接使用该项目的任何脚本的使用者都应仔细阅读此声明。本人保留随时更改或补充此免责声明的权利。一旦使用并复制了任何相关脚本或本项目的规则，则视为您已接受此免责声明.
+> Anyone who views this project in any way or directly or indirectly uses any scripts from this project should read this disclaimer carefully. I reserve the right to change or supplement this disclaimer at any time. By using and copying any related script or rules of this project, you are deemed to have accepted this disclaimer.
 >
-> 您必须在下载后的24小时内从计算机或手机中完全删除以上内容.
+> You must completely delete the above content from your computer or mobile phone within 24 hours after downloading.
 >
-> 您使用或者复制了本仓库且本人制作的任何脚本，则视为`已接受`此声明，请仔细阅读
+> If you use or copy any scripts made by me from this repository, you are deemed to have 'accepted' this disclaimer. Please read carefully.
+### Bot Usage Process
 
-### Bot使用流程
+- 【First】Please follow [the channel](https://t.me/agentONE_R) and [the bot](https://t.me/radiance_helper_bot)
 
-- 【首先】请关注 [频道](https://t.me/agentONE_R) 和 [机器人](https://t.me/radiance_helper_bot)
+- 【Then】[Install and configure ](https://github.com/semicons/java_oci_manage/blob/main/md/install.md)(you can choose between public network mode and local non-public network mode)
 
-- 【然后】[安装与配置](https://github.com/semicons/java_oci_manage/blob/main/md/install.md)(可选公网模式和本地无公网模式)
+- 【Next】Use the bot command '/raninfo' to generate random information, then insert it into the 'client_config' file (created after executing the one-click installation command), and also input the Oracle Cloud API parameters into the configuration file (or upload API parameters via the bot).
 
-- 【其次】机器人使用/raninfo命令生成随机信息，然后将它填入client_config(执行完一键安装命令后产生)配置文件内，同时将甲骨文云API参数放入配置文件内(也可机器人上传API参数)
+- 【Finally】 Restart the bot by running bash sh_client_bot.sh, and you can start using the bot!
 
-- 【最后】bash sh_client_bot.sh 重新启动机器人，可以使用bot了！
-
-> ps:程序自带开启9527端口功能，如仍未开启可手动开启端口，[测试网站](https://port.ping.pe) 可测试端口是否开放
+> ps:The program comes with the feature to open port 9527. If the port is not open, you can manually enable it. You can test whether the port is open by visiting this test website(https://port.ping.pe).
 >
-> ps:使用本地模式则无需开端口
+> ps:If you use the local mode, there is no need to open any ports.
 > 
-> ps:脚本支持传参 bash sh_client_bot.sh 8888 更换默认9527端口
+> ps:The script supports passing arguments. You can change the default port 9527 to another port by using the command 'bash sh_client_bot.sh 8888', where 8888 is the new port number you want to use.
 
-### 卸载
+### Uninstall
 ```bash
 rm -rf gz_client_bot.tar.gz client_config r_client.jar sh_client_bot.sh log_r_client.log debug-*.log
 ```
-如不需要JDK也可卸载：
+If JDK is not required, it can also be uninstalled:
 ```bash 
 apt remove openjdk*
 ```
 
-### 说明与帮助
-- [已实现功能](https://github.com/semicons/java_oci_manage/blob/main/md/function.md)
+### Documentation and Help
+- [Implemented Features](https://github.com/semicons/java_oci_manage/blob/main/md/function.md)
 
-- [机器人操作与命令说明](https://github.com/semicons/java_oci_manage/blob/main/md/BOT-README.md)
+- [Robot Operations and Command Guide](https://github.com/semicons/java_oci_manage/blob/main/md/BOT-README.md)
 
-- [甲骨文云获取API参数与上传(tip：如只刷机创建API文件时可以限制各种操作权限)](https://github.com/semicons/java_oci_manage/blob/main/md/oracle.md)
+- [Oracle Cloud API Parameter Retrieval and Upload(tip：When creating an API file for flashing devices only, you can restrict various operational permissions.)](https://github.com/semicons/java_oci_manage/blob/main/md/oracle.md)
 
-- [azure获取API参数与上传](https://github.com/semicons/java_oci_manage/blob/main/md/azure.md)
+- [Azure API Parameter Retrieval and Upload](https://github.com/semicons/java_oci_manage/blob/main/md/azure.md)
 
-- [常见问题](https://t.me/agentONE_R/41)
+- [Frequently Asked Questions](https://t.me/agentONE_R/41)
 
 
 
-### 更新日志
+### Changelog
 <details>
-<summary>查看Releases说明</summary>
+<summary>examine Releases explain</summary>
  
-> 证明该项目仍然存活
+> Proof that the Project is Still Active
 
 
 </details>
